@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MhB2ir+TwVQ681ga5tmGSs0kDmFbhfENAkk0PaSX+SGqvoJyRQc6AstomyREhkTnipmK4RPKPlvk3XirxJaDKg==",
+  "dgSpecHash": "RxzYqSeA/T5E2rv4+ej+jeWnSFureelKMqfQvl9+9K/KZsqeedAb/vLuyLoVFQEqcZtHv+mp/TVOKfeqw/6wrQ==",
   "success": true,
   "projectFilePath": "C:\\projetos\\curso-microservices\\curso\\apiAutenticacao\\apiAutenticacao.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\saoapint\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\saoapint\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\saoapint\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.3\\microsoft.data.sqlite.core.6.0.3.nupkg.sha512",
     "C:\\Users\\saoapint\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

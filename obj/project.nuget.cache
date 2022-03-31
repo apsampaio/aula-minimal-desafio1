@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RxzYqSeA/T5E2rv4+ej+jeWnSFureelKMqfQvl9+9K/KZsqeedAb/vLuyLoVFQEqcZtHv+mp/TVOKfeqw/6wrQ==",
+  "dgSpecHash": "DCy8o6J4mbzE+TX20aaQFEAhQ2V26sbcPjRe0/gPihpNyMUv+dPnMl76ZQWsH/JOM7n3cDD4q1zBU+LG1dyHNA==",
   "success": true,
   "projectFilePath": "C:\\projetos\\curso-microservices\\curso\\apiAutenticacao\\apiAutenticacao.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\saoapint\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\saoapint\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\saoapint\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\saoapint\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.3\\microsoft.data.sqlite.core.6.0.3.nupkg.sha512",

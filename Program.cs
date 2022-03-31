@@ -1,10 +1,12 @@
-using Model;
 using Infra.Context;
 using Infra.Repositories;
 using Infra.Repositories.Interfaces;
+
 using Service.Services;
 using Service.Interfaces;
 using Service.Validations;
+using Service.Providers;
+
 using API.Errors;
 
 
@@ -12,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<DatabaseContext>();
 builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+builder.Services.AddScoped(typeof(IHashProvider), typeof(HashProvider));
 
 builder.Services.AddTransient<IUserServiceCollection, UserServiceCollection>();
 

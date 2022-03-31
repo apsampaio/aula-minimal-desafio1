@@ -26,6 +26,15 @@ public class UserRepository : IUserRepository
         _databaseContext.SaveChanges();
     }
 
+    public User? FindByUsername(string username)
+    {
+        var user = entity.SingleOrDefault(u => u.username == username);
+
+        _databaseContext.Users.SingleOrDefault(u => u.username == username);
+
+        return user;
+    }
+
     public void SaveChanges()
     {
         _databaseContext.SaveChanges();

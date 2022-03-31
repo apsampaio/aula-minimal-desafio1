@@ -1,6 +1,8 @@
 using Service.Interfaces;
 using Infra.Repositories.Interfaces;
 using Model;
+using Service.Validations;
+using API.Errors;
 
 namespace Service.Services;
 
@@ -13,8 +15,10 @@ public class UserServiceCollection : IUserServiceCollection
         _userRepository = userRepository;
     }
 
-    public User SignUp(CreateUser userProps)
+    public User SignUp(ValidateUserProps userProps)
     {
+        userProps.Validate();
+
         var user = new User
         {
             id = Guid.NewGuid(),

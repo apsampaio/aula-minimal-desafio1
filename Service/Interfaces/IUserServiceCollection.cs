@@ -9,5 +9,8 @@ public interface IUserServiceCollection
     User SignUp(ValidateUserProps props);
 
     // Login do Usuario
-    string SignIn();
+    string SignIn(ValidateUserSignIn props);
+
+    // Encontrar usuario pelo Username
+    User? FindUserByUsername(string username);
 }

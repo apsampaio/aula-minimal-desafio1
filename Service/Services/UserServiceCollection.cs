@@ -10,11 +10,18 @@ public class UserServiceCollection : IUserServiceCollection
 {
     private readonly IUserRepository _userRepository;
     private readonly IHashProvider _hashProvider;
+    private readonly ITokenProvider _tokenProvider;
 
-    public UserServiceCollection(IUserRepository userRepository, IHashProvider hashProvider)
+    public UserServiceCollection(IUserRepository userRepository, IHashProvider hashProvider, ITokenProvider tokenProvider)
     {
         _userRepository = userRepository;
         _hashProvider = hashProvider;
+        _tokenProvider = tokenProvider;
+    }
+
+    public User? FindUserByUsername(string username)
+    {
+        return _userRepository.FindByUsername(username);
     }
 
     public User SignUp(ValidateUserProps userProps)
@@ -23,10 +30,7 @@ public class UserServiceCollection : IUserServiceCollection
 
         // Verificar se username nao este sendo utilizado
 
-        var userExists = _userRepository.FindByUsername(userProps.username);
-
-
-        if (userExists != null)
+        if (FindUserByUsername(userProps.username) != null)
         {
             throw new AppError("Username já utilizado", 400);
         }
@@ -50,8 +54,22 @@ public class UserServiceCollection : IUserServiceCollection
         return user;
     }
 
-    public string SignIn()
+    public string SignIn(ValidateUserSignIn userProps)
     {
-        return "Hello World!";
+        userProps.Validate();
+
+        var user = FindUserByUsername(userProps.username);
+
+        if (user == null)
+            throw new AppError("Usuario ou senha invalidos", 400);
+
+        var isPasswordValid = _hashProvider.CompareHash(user.password, userProps.password);
+
+        if (!isPasswordValid)
+            throw new AppError("Usuario ou senha invalidos", 400);
+
+        var token = _tokenProvider.Generate(user);
+
+        return token;
     }
 }

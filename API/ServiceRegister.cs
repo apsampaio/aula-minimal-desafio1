@@ -24,4 +24,17 @@ public static class ServiceRegister
         services.AddTransient<IUserServiceCollection, UserServiceCollection>();
     }
 
+    public static void ConfigureCORS(this IServiceCollection services)
+    {
+        services.AddCors(options =>
+            options.AddPolicy("CORS", builder =>
+                builder
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .WithOrigins("http://localhost:3000")
+                .AllowCredentials()
+            )
+        );
+    }
+
 }

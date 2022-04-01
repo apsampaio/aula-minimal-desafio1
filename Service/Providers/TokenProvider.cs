@@ -14,8 +14,8 @@ public class TokenProvider : ITokenProvider
 
     public string Generate(User user)
     {
-        var secret = "MY_BIGGEST_SECRET";
-        var key = Encoding.ASCII.GetBytes(secret);
+        var secret = Environment.GetEnvironmentVariable("TOKEN_SECRET");
+        var key = Encoding.ASCII.GetBytes(secret!);
 
         var tokenHandler = new JwtSecurityTokenHandler();
 

@@ -1,5 +1,8 @@
 using API;
 using API.Routes;
+using DotNetEnv;
+
+Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 

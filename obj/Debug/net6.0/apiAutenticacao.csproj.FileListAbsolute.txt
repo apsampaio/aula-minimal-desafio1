@@ -57,3 +57,5 @@ C:\projetos\curso-microservices\curso\apiAutenticacao\bin\Debug\net6.0\Microsoft
 C:\projetos\curso-microservices\curso\apiAutenticacao\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\projetos\curso-microservices\curso\apiAutenticacao\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\projetos\curso-microservices\curso\apiAutenticacao\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\projetos\curso-microservices\curso\apiAutenticacao\bin\Debug\net6.0\DotNetEnv.dll
+C:\projetos\curso-microservices\curso\apiAutenticacao\bin\Debug\net6.0\Sprache.dll
